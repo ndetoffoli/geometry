@@ -53,7 +53,7 @@ class Rectangle(Figure):
         print ASCII_CHAR * int(self.length)
 
 
-#square class
+# square class
 class Square(Rectangle):
         def __init__(self, length):
                 super(Square, self).__init__(length, length)
@@ -81,7 +81,6 @@ class Elipse(Figure):
         return "Elipse r1=%.2f x r2=%.2f" % (self.radius_1, self.radius_2)
 
     def drawAsciiArt(self):
-        # while count < self.length:
         print " " + ASCII_CHAR * (int(self.radius_1) * 2 - 2) + " "
         for x in xrange(int(self.radius_2) * 2 - 2):
             print ASCII_CHAR + " " * (int(self.radius_1) * 2 - 2) + ASCII_CHAR
@@ -92,13 +91,6 @@ class Elipse(Figure):
 class Circle(Elipse):
     def __init__(self, radius):
         super(Circle, self).__init__(radius, radius)
-    #     self.radius = radius
-    #
-    # def perimeter(self):
-    #     return 2 * math.pi * self.radius
-    #
-    # def area(self):
-    #     return math.pi * math.pow(self.radius, 2)
 
     def __str__(self):
         return "Circle r=%.2f" % self.radius_1

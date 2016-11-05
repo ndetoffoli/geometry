@@ -1,5 +1,5 @@
 ################################################################################
-# test square class
+# test ellipse class
 # nicolas de toffoli
 ################################################################################
 
@@ -7,17 +7,17 @@ import pytest
 import geometry
 
 # global objects
-square_0 = geometry.Square(0.0)
-square_1 = geometry.Square(10.0)
+ellipse_0 = geometry.Elipse(0.0, 0.0)
+ellipse_1 = geometry.Elipse(4.0, 2.0)
 
 def test_perimeter_0():
-    assert square_0.perimeter() == 0.0
+    assert ellipse_0.perimeter() == 0.0
 
 def test_perimeter_1():
-    assert square_1.perimeter() == 40.0
+    assert round(ellipse_1.perimeter(), 2) == 19.87
 
 def test_area_0():
-    assert square_0.area() == 0.0
+    assert ellipse_0.area() == 0.0
 
 def test_area_1():
-    assert square_1.area() == 100.0
+    assert round(ellipse_1.area(), 2) == 25.13
